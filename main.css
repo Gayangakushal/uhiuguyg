@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.badge-custom {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+.badge-new {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    background-color: #ffc107;
+    color: black;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+.card-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    animation: colorChange 2s infinite;
+}
+
+.card-price-original {
+    text-decoration: line-through;
+    color: #dc3545;
+}
+
+.btn-custom {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.btn-custom.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.btn-custom.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-custom.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+.btn-custom.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.card-img-top {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1);
+}
+
+.card-body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-custom {
+    background-color: #1c1c1c;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-custom:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes colorChange {
+    0% {
+        color: #011314;
+    }
+    50% {
+        color: #ffcc00;
+    }
+    100% {
+        color: #1de63b;
+    }
+}
+
+.custom-font {
+    font-family: 'Roboto', sans-serif;
+}

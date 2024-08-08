@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+        .card-body {
+            padding: 1rem;
+        }
+        .form-control, .btn, .alert {
+            background-color: #495057;
+            color: #ffffff;
+        }
+        .form-control::placeholder {
+            color: #ced4da;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="path_to_your_image/iphone12.jpg" alt="Apple iPhone 12" class="product-image img-thumbnail">
+            </div>
+            <div class="col-md-8">
+                <h2>Apple iPhone 12</h2>
+                <p><span class="badge badge-primary">4.5 Stars</span> | 39 Reviews and Ratings</p>
+                <h4>Rs. 50000.00 <small><del>Rs. 52500.00</del></small> <span class="text-success">(Save Rs. 2500.00)</span></h4>
+                <ul>
+                    <li>Warranty: 6 Months Warranty</li>
+                    <li>Return Policy: 1 Month Return Policy</li>
+                    <li>In Stock: 10 Items Available</li>
+                </ul>
+                <p>Seller: Lahiru | Sold: 100 Items</p>
+                <div class="alert alert-warning" role="alert">
+                    Stand a chance to get 5% discount by using VISA or MASTER
+                </div>
+                <form action="your_php_script.php" method="POST">
+                    <div class="form-group">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" class="form-control" value="1" min="1">
+                    </div>
+                    <button type="submit" class="btn btn-success">Buy Now</button>
+                    <button type="button" class="btn btn-primary">Add To Cart</button>
+                    <button type="button" class="btn btn-secondary">Add to Wishlist</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
