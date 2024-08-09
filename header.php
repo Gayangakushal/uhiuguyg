@@ -150,7 +150,7 @@
             <div class="offset-4 offset-lg-1 col-4 col-lg-1 logo" style="height: 60px;"></div>
             <div class="col-12 col-lg-6">
                 <div class="input-group mt-3 mb-3">
-                    <input type="text" class="form-control" aria-label="Text input with dropdown button" id="basic_search_txt">
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button" id="search_txt">
                     <select class="form-select" style="max-width: 250px;" id="basic_search_select">
                         <option value="0">All Categories</option>
 
@@ -178,7 +178,7 @@
             </div>
 
             <div class="col-12 col-lg-2 d-grid">
-                <button class="btn btn-info mt-3 mb-3" onclick="basicSearch(0);">Search</button>
+                <button class="btn btn-info mt-3 mb-3" onclick="basicSearch();">Search</button>
             </div>
 
 

@@ -252,7 +252,7 @@ function signOut(){
     request.open("POST", "signOutProcess.php", true);
     request.send();
 }
-function basicSearch(x) {
+function basicearch(x) {
     var txt = document.getElementById("basic_search_txt");
     var select = document.getElementById("basic_search_select");
 
@@ -799,6 +799,30 @@ function regProduct() {
         request.open("POST", "searchProductProcess.php", true);
         request.send(f);
     }
+    
+
+    function basicSearch(x) {
+        
+        let search_txt = document.getElementById("search_text").value;
+        let cat_id = x;
+
+        var f = new FormData();
+        f.append("search_text", search_txt);
+        f.append("cat_id", cat_id);
+    
+        var r = new XMLHttpRequest();
+    
+        r.onreadystatechange = function (){
+            if(r.readyState == 4 & r.status == 200){
+                var response = r.responseText;
+                document.getElementById("basicSearchResult").innerHTML = response;
+            }
+        }
+    
+        r.open("POST", "basicSearchProcess.php", true);
+        r.send(f);
+    
+    }
     function addToCart(id){
         var r =new XMLHttpRequest();
     
@@ -812,3 +836,6 @@ function regProduct() {
         r.open("GET","addToCartProcess.php?id="+id,true);
         r.send();
     }
+    
+
+    

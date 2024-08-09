@@ -112,15 +112,8 @@
         <h1 class="header-title"><?php echo htmlspecialchars($category_name); ?></h1>
     </div>
 
-    <div class="container d-flex justify-content-end search-container">
-        <div class="col-3 mt-3">
-            <input type="text" class="form-control" placeholder="Search" id="search_text">
-        </div>
-        <button class="btn btn-outline-info col-1 mt-3 ms-2" onclick="basicSearch(<?php echo($cat_id); ?>);">Search</button>
-        
-    </div>
 
-    <div class="container product-card-container" id="basicSearchResult">
+    <div class="container product-card-container">
         <div class="row">
             <?php
             $product_rs = Database::search("SELECT * FROM product WHERE category_id='" . $cat_id . "'");
@@ -145,7 +138,8 @@
                                 </div>
                                 <div class="d-grid gap-2">
                                     <button class="btn btn-secondary btn-custom" onclick="addToCart(<?php echo $product_data['id']; ?>);">Add to Cart</button>
-                                    <a href="<?php echo "singleProductView.php?id=" . ($product_data["id"]); ?>" class="col-12 btn btn-info">Buy Now / මිලදී ගන්න</a>
+                                    <a href="singleProductView.php?s=<?php echo $product_data["id"]; ?>" class="btn btn-secondary disabled">View Product</a>
+                                    <button class="btn btn-info btn-custom">Buy Now / මිලදී ගන්න</button>
                                 </div>
                             <?php } else { ?>
                                 <div class="d-flex justify-content-center align-items-center badge badge-custom">

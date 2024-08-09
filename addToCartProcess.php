@@ -9,10 +9,10 @@ if(isset($_GET["id"])){
     $pid = $_GET["id"];
     $umail = $_SESSION["u"]["id"];
 
-    $cart_rs = Database::search("SELECT * FROM cart WHERE product_id='".$pid."' AND user_id='".$umail."'");
+    $cart_rs = Database::search("SELECT * FROM `cart` WHERE `product_id`='".$pid."' AND `user_id`='".$uid."'");
     $cart_num = $cart_rs->num_rows;
 
-    $product_rs = Database::search("SELECT * FROM product WHERE id='".$pid."'");
+    $product_rs = Database::search("SELECT * FROM `product` WHERE `id`='".$pid."'");
     $product_data = $product_rs->fetch_assoc();
 
     $product_qty = $product_data["qty"];
@@ -24,7 +24,7 @@ if(isset($_GET["id"])){
 
         if($product_qty >= $new_qty){
 
-            Database::iud("UPDATE cart SET qty='".$new_qty."' WHERE product_id='".$pid."' AND user_id='".$umail."'");
+            Database::iud("UPDATE `cart` SET `qty`='".$new_qty."' WHERE `product_id`='".$pid."' AND `user_id`='".$uid."'");
             echo ("Update Finished");
 
         }else{
@@ -32,7 +32,7 @@ if(isset($_GET["id"])){
         }
     }else{
 
-        Database::iud("INSERT INTO cart(product_id,user_id,qty) VALUES ('".$pid."','".$umail."','1')");
+        Database::iud("INSERT INTO `cart`(`product_id`,`user_id`,`qty`) VALUES ('".$pid."','".$uid."','1')");
         echo ("New Product added to the Cart");
 
     }
